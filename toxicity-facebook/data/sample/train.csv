@@ -1,0 +1,45 @@
+id,parent_post_id,page,type,time,text,text_clean,num_reactions,metadata_json,label
+post1,,samplepage,post,2024-01-01T10:00:00,Mobile Legends seru tapi komunitasnya kadang kasar banget.,mobile legends seru tapi komunitasnya kadang kasar banget.,10,"{}",1
+post1_c1,post1,samplepage,comment,2024-01-01T10:05:00,Setuju banyak yang toxic,setuju banyak yang toxic,2,"{}",1
+post1_c2,post1,samplepage,comment,2024-01-01T10:07:00,Santai aja lah,santai aja lah,1,"{}",0
+post2,,samplepage,post,2024-01-02T11:00:00,Komunitas Mobile Legends makin supportif kok,komunitas mobile legends makin supportif kok,5,"{}",0
+post2_c1,post2,samplepage,comment,2024-01-02T11:15:00,Iya sekarang lebih damai,iya sekarang lebih damai,1,"{}",0
+post3,,samplepage,post,2024-01-03T08:30:00,Tiap rank match ketemu pemain toxic sumpah bikin capek,tiap rank match ketemu pemain toxic sumpah bikin capek,15,"{}",1
+post3_c1,post3,samplepage,comment,2024-01-03T08:45:00,AFK mulu parah,afk mulu parah,3,"{}",1
+post4,,samplepage,post,2024-01-04T14:00:00,Komunitas ini banyak yang positif juga kok,komunitas ini banyak yang positif juga kok,3,"{}",0
+post5,,samplepage,post,2024-01-05T16:00:00,Dasar noob idiot jangan main kalo ga bisa,dasar noob idiot jangan main kalo ga bisa,4,"{}",1
+post5_c1,post5,samplepage,comment,2024-01-05T16:05:00,Toxic banget sih,toxic banget sih,2,"{}",1
+post5_c2,post5,samplepage,comment,2024-01-05T16:06:00,Santuy aja bos,santuy aja bos,1,"{}",0
+post6,,samplepage,post,2024-01-06T09:00:00,Main santai jangan kebanyakan marah,main santai jangan kebanyakan marah,2,"{}",0
+post6_c1,post6,samplepage,comment,2024-01-06T09:05:00,Bener chill aja,bener chill aja,1,"{}",0
+post7,,samplepage,post,2024-01-07T12:12:00,Kok banyak yang suka flame di rank,kok banyak yang suka flame di rank,6,"{}",1
+post7_c1,post7,samplepage,comment,2024-01-07T12:20:00,Mereka ga bisa main, mereka nyalahin tim,mereka ga bisa main mereka nyalahin tim,2,"{}",1
+post8,,samplepage,post,2024-01-08T18:00:00,Gg team nice job,gg team nice job,8,"{}",0
+post8_c1,post8,samplepage,comment,2024-01-08T18:05:00,Thanks bro,thanks bro,2,"{}",0
+post9,,samplepage,post,2024-01-09T20:00:00,Musuh terlalu jago wkwk,musuh terlalu jago wkwk,7,"{}",0
+post9_c1,post9,samplepage,comment,2024-01-09T20:05:00,Kalah karena noob,kalah karena noob,1,"{}",1
+post10,,samplepage,post,2024-01-10T10:00:00,Aduh tim random toxic semua,aduh tim random toxic semua,9,"{}",1
+post10_c1,post10,samplepage,comment,2024-01-10T10:05:00,Sabar aja,sabar aja,1,"{}",0
+post11,,samplepage,post,2024-01-11T11:00:00,Pemain sekarang udah dewasa,pemain sekarang udah dewasa,5,"{}",0
+post12,,samplepage,post,2024-01-12T12:00:00,Noob idiot pergi sana,noob idiot pergi sana,4,"{}",1
+post12_c1,post12,samplepage,comment,2024-01-12T12:05:00,Kasar banget sih,kasar banget sih,1,"{}",1
+post13,,samplepage,post,2024-01-13T13:00:00,Rank legend makin susah,rank legend makin susah,3,"{}",0
+post13_c1,post13,samplepage,comment,2024-01-13T13:05:00,Belajar dulu,belajar dulu,1,"{}",0
+post14,,samplepage,post,2024-01-14T14:00:00,Harusnya komunitas lebih ramah,harusnya komunitas lebih ramah,5,"{}",0
+post14_c1,post14,samplepage,comment,2024-01-14T14:05:00,Setuju banget,setuju banget,1,"{}",0
+post15,,samplepage,post,2024-01-15T15:00:00,Toxic kaya gini bikin males main,toxic kaya gini bikin males main,6,"{}",1
+post15_c1,post15,samplepage,comment,2024-01-15T15:05:00,Jangan main kalo cupu,jangan main kalo cupu,2,"{}",1
+post16,,samplepage,post,2024-01-16T16:00:00,Komunitas MLBB harus kompak,komunitas mlbb harus kompak,4,"{}",0
+post16_c1,post16,samplepage,comment,2024-01-16T16:05:00,Ayo saling support,ayo saling support,2,"{}",0
+post17,,samplepage,post,2024-01-17T17:00:00,Badword everywhere,badword everywhere,5,"{}",1
+post17_c1,post17,samplepage,comment,2024-01-17T17:05:00,Bener kata kamu,bener kata kamu,1,"{}",0
+post18,,samplepage,post,2024-01-18T18:00:00,Aku suka komunitas ini,aku suka komunitas ini,5,"{}",0
+post19,,samplepage,post,2024-01-19T19:00:00,Semua player sampah,semua player sampah,4,"{}",1
+post19_c1,post19,samplepage,comment,2024-01-19T19:05:00,Kok marah gitu,kok marah gitu,1,"{}",0
+post20,,samplepage,post,2024-01-20T20:00:00,Main bareng jadi makin seru,main bareng jadi makin seru,6,"{}",0
+post20_c1,post20,samplepage,comment,2024-01-20T20:05:00,Ayo push rank,ayo push rank,2,"{}",0
+post21,,samplepage,post,2024-01-21T21:00:00,Tim gw goblok semua,tim gw goblok semua,7,"{}",1
+post21_c1,post21,samplepage,comment,2024-01-21T21:05:00,Jangan kasar dong,jangan kasar dong,1,"{}",0
+post22,,samplepage,post,2024-01-22T22:00:00,Player baru wajib diajarin,player baru wajib diajarin,3,"{}",0
+post23,,samplepage,post,2024-01-23T23:00:00,Toxicity bikin game rusak,toxicity bikin game rusak,8,"{}",1
+post23_c1,post23,samplepage,comment,2024-01-23T23:05:00,Setuju, banyak yang flame,setuju banyak yang flame,2,"{}",1

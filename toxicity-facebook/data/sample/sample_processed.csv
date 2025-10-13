@@ -1,0 +1,5 @@
+id,parent_post_id,page,type,time,text,text_clean,num_reactions,metadata_json,label
+post1,,samplepage,post,2024-01-01T10:00:00,Mobile Legends seru tapi komunitasnya kadang kasar banget.,mobile legends seru tapi komunitasnya kadang kasar banget.,10,"{}",1
+post1_c1,post1,samplepage,comment,2024-01-01T10:05:00,Setuju banyak yang toxic,setuju banyak yang toxic,2,"{}",1
+post1_c2,post1,samplepage,comment,2024-01-01T10:07:00,Santai aja lah,santai aja lah,1,"{}",0
+post2,,samplepage,post,2024-01-02T11:00:00,Komunitas Mobile Legends makin supportif kok,komunitas mobile legends makin supportif kok,5,"{}",0
