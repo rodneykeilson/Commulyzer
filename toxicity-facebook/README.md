@@ -51,6 +51,17 @@ Tambahkan `--discover` bila ingin mencoba penemuan halaman otomatis via Google C
 6. `python eval/evaluate.py --model_path models/best --test_csv data/sample/val.csv --query "Mobile Legends"`
 7. `python eval/explainability.py --model_path models/best --csv data/sample/val.csv --out_dir eval/explain`
 
+### Pipeline Satu Perintah + Penyimpanan Database
+
+- Pastikan dependensi terinstal dan, bila memakai SQLite default, tidak perlu membuat database manual.
+- Contoh perintah:
+  ```bash
+  python -m pipelines.run_pipeline --query "Mobile Legends" --discover --db-url sqlite:///toxicity.db --fast
+  ```
+- Pipeline melakukan: penemuan halaman (opsional), scraping, penyimpanan ke database `toxicity.db`, preprocess JSONL ke CSV, fine-tuning model (opsional, dapat dilewati dengan `--skip-train`), dan prediksi toksisitas terbaru dengan ringkasan otomatis.
+- Gunakan `--pages MLBBCommunity` untuk menambahkan halaman manual dan `--pages-file pages.txt` bila ingin membaca daftar halaman dari file.
+- Database dapat diinspeksi memakai SQLite browser; tabel utama: `pages`, `posts`, `comments`.
+
 ## Interpretasi Hasil
 Misal hasil evaluasi menunjukkan `Toxic percent: 80%`. Ini berarti 80% dari seluruh item (post + komentar) yang dianalisis diprediksi sebagai toxic oleh model. Angka ini merupakan indikator tingkat toksisitas komunitas, tetapi bukan kebenaran mutlak. Pertimbangkan:
 - Bias model: model dilatih pada dataset tertentu dan bisa salah menilai konteks lokal/slang.
@@ -68,6 +79,11 @@ Gunakan hasil sebagai sinyal awal, kemudian lakukan validasi manual sebelum mena
 ## Pengujian
 ```bash
 pytest
+```
+
+Atau gunakan skrip otomatis:
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\setup_dev.ps1
 ```
 
 ## Referensi Tambahan

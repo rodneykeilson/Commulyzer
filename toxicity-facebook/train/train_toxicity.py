@@ -142,8 +142,23 @@ def train_model(args) -> Dict[str, Any]:
 
 
 def predict_texts(model_path: str, texts: List[str]) -> Dict[str, List[float]]:
-    tokenizer = AutoTokenizer.from_pretrained(model_path)
-    model = AutoModelForSequenceClassification.from_pretrained(model_path)
+    from pathlib import Path
+
+    path_obj = Path(model_path)
+    model_ref = path_obj.resolve().as_posix() if path_obj.exists() else model_path
+
+    try:
+        tokenizer = AutoTokenizer.from_pretrained(model_ref)
+        model = AutoModelForSequenceClassification.from_pretrained(model_ref)
+    except Exception as exc:  # pragma: no cover - fallback untuk model tidak tersedia
+        LOGGER.warning(
+            "Gagal memuat model %s (%s). Menggunakan fallback %s untuk prediksi.",
+            model_ref,
+            exc,
+            FALLBACK_MODEL_ID,
+        )
+        tokenizer = AutoTokenizer.from_pretrained(FALLBACK_MODEL_ID)
+        model = AutoModelForSequenceClassification.from_pretrained(FALLBACK_MODEL_ID)
     inputs = tokenizer(texts, padding=True, truncation=True, return_tensors="pt")
     with torch.no_grad():
         outputs = model(**inputs)

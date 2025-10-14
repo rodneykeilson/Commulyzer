@@ -42,7 +42,8 @@ def mock_get_posts(monkeypatch, tmp_path):
 
 def test_scrape_pages_writes_jsonl(tmp_path):
     out_file = tmp_path / "out.jsonl"
-    facebook_safe.scrape_pages(["page1"], str(out_file), pages_per_page=2, delay=0)
+    rows = facebook_safe.scrape_pages(["page1"], str(out_file), pages_per_page=2, delay=0)
+    assert len(rows) == 2
     assert out_file.exists()
     lines = out_file.read_text(encoding="utf-8").strip().splitlines()
     assert len(lines) == 2

@@ -6,6 +6,8 @@ import json
 from pathlib import Path
 from typing import List, Optional
 
+from collections import defaultdict
+
 from utils.io import read_jsonl
 from utils.logger import get_logger
 
@@ -34,6 +36,7 @@ def main() -> None:
     parser.add_argument("--delay", type=float, default=1.5, help="Delay antar post dalam detik")
     parser.add_argument("--pages-per-page", type=int, default=5, help="Jumlah halaman yang di-scrape per page")
     parser.add_argument("--options", help="JSON string untuk opsi tambahan facebook_scraper")
+    parser.add_argument("--db-url", help="URL database untuk menyimpan hasil (misal sqlite:///toxicity.db)")
 
     args = parser.parse_args()
 
@@ -59,7 +62,25 @@ def main() -> None:
         out_file = Path(out_file)
         out_file.parent.mkdir(parents=True, exist_ok=True)
 
-    scrape_pages(pages=pages, out_path=str(out_file), pages_per_page=args.pages_per_page, delay=args.delay, options=options)
+    rows = scrape_pages(
+        pages=pages,
+        out_path=str(out_file),
+        pages_per_page=args.pages_per_page,
+        delay=args.delay,
+        options=options,
+    )
+
+    if args.db_url:
+        from storage.repository import ToxicityRepository
+
+        repo = ToxicityRepository(args.db_url)
+        grouped = defaultdict(list)
+        for row in rows:
+            grouped[row.get("page", "unknown")].append(row)
+        total_saved = 0
+        for page, page_rows in grouped.items():
+            total_saved += repo.save_posts(page, page_rows)
+        LOGGER.info("Total tersimpan di database: %d", total_saved)
 
     rows = read_jsonl(out_file)
     LOGGER.info("Total posts tersimpan: %d", len(rows))

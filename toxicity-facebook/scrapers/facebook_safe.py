@@ -83,7 +83,7 @@ def scrape_pages(
     pages_per_page: int = 5,
     delay: float = 1.5,
     options: Optional[Dict[str, object]] = None,
-) -> None:
+) -> List[Dict[str, object]]:
     """Scrape daftar halaman secara aman.
 
     Parameter options dapat berisi cookie_path dan limit komentar.
@@ -99,7 +99,7 @@ def scrape_pages(
         for page in pages:
             rows.extend(_fallback_scrape(page, pages_per_page))
         _dump_jsonl(out_path, rows)
-        return
+        return rows
 
     cookie_file = options.get("cookies") if options else None
     if cookie_file and not os.path.exists(cookie_file):
@@ -135,6 +135,7 @@ def scrape_pages(
                 time.sleep(delay * 2)
 
     _dump_jsonl(out_path, rows)
+    return rows
 
 
 def _dump_jsonl(path: str, rows: List[Dict[str, object]]) -> None:
