@@ -34,10 +34,25 @@ toxicity-facebook/
 python -m venv .venv
 .venv\Scripts\activate  # Windows
 pip install -r requirements.txt
+copy .env.example .env  # isi kredensial secara lokal
 ```
 
+Lengkapi `.env` dengan cookie Facebook (misal `FACEBOOK_COOKIES`) dan token lain sesuai kebutuhan. Jangan commit `.env` ke repository publik.
+
 ## Contoh Scraping
-```bash
+
+### Scraping Group Facebook (aman secara default)
+```powershell
+python -m scrapers.cli scrape-group --group mlbbidofficial --max-posts 20 --comments-per-post 5 --db data/toxicity.db --allow-scrape
+```
+- `--allow-scrape` wajib agar scraping jaringan berjalan. Alternatifnya set `ALLOW_SCRAPE=true` di `.env`.
+- Gunakan `--sample-only` ketika ingin mencoba alur tanpa koneksi internet:
+  ```powershell
+  python -m scrapers.cli scrape-group --sample-only --db data/toxicity.db
+  ```
+
+### Mode Legacy (scrape halaman)
+```powershell
 python -m scrapers.cli --query "Mobile Legends" --pages-file pages.txt --max-posts 1000
 ```
 Tambahkan `--discover` bila ingin mencoba penemuan halaman otomatis via Google Custom Search API. Pastikan `GOOGLE_API_KEY` terpasang di environment.
@@ -61,6 +76,29 @@ Tambahkan `--discover` bila ingin mencoba penemuan halaman otomatis via Google C
 - Pipeline melakukan: penemuan halaman (opsional), scraping, penyimpanan ke database `toxicity.db`, preprocess JSONL ke CSV, fine-tuning model (opsional, dapat dilewati dengan `--skip-train`), dan prediksi toksisitas terbaru dengan ringkasan otomatis.
 - Gunakan `--pages MLBBCommunity` untuk menambahkan halaman manual dan `--pages-file pages.txt` bila ingin membaca daftar halaman dari file.
 - Database dapat diinspeksi memakai SQLite browser; tabel utama: `pages`, `posts`, `comments`.
+
+## Workflow Mini: DB → Pelatihan
+1. Jalankan scraping kecil (bisa sample mode saat pengembangan):
+  ```powershell
+  python -m scrapers.cli scrape-group --group mlbbidofficial --max-posts 20 --comments-per-post 5 --db data/toxicity.db --sample-only
+  ```
+2. Ekspor kandidat data dari database untuk anotasi manual:
+  ```powershell
+  python - <<'PY'
+  from storage.repository import ToxicityRepository
+  import pandas as pd
+
+  repo = ToxicityRepository("sqlite:///data/toxicity.db")
+  rows = repo.fetch_unlabeled_items(limit=200)
+  pd.DataFrame(rows).to_csv("data/processed/mlbbidofficial_candidates.csv", index=False)
+  print("Data siap dianotasi di data/processed/mlbbidofficial_candidates.csv")
+  PY
+  ```
+3. Setelah file tersebut diberi label (`label` berisi {0,1}), jalankan pelatihan:
+  ```powershell
+  python -m train.train_toxicity --train_csv data/processed/mlbbidofficial_candidates.csv --val_csv data/sample/val.csv --output_dir models/mlbbidofficial --fast
+  ```
+  Gunakan opsi tanpa `--fast` saat dataset final sudah siap.
 
 ## Interpretasi Hasil
 Misal hasil evaluasi menunjukkan `Toxic percent: 80%`. Ini berarti 80% dari seluruh item (post + komentar) yang dianalisis diprediksi sebagai toxic oleh model. Angka ini merupakan indikator tingkat toksisitas komunitas, tetapi bukan kebenaran mutlak. Pertimbangkan:
