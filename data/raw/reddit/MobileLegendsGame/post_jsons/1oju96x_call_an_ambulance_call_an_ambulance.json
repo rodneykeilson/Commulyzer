@@ -1,0 +1,927 @@
+[
+  {
+    "kind": "Listing",
+    "data": {
+      "after": null,
+      "dist": 1,
+      "modhash": "gc92cklqstc4c85624b662bcf9c4066b13c1d41a48aa7162c6",
+      "geo_filter": "",
+      "children": [
+        {
+          "kind": "t3",
+          "data": {
+            "approved_at_utc": null,
+            "subreddit": "MobileLegendsGame",
+            "selftext": "but not for me",
+            "user_reports": [],
+            "saved": false,
+            "mod_reason_title": null,
+            "gilded": 0,
+            "clicked": false,
+            "title": "call an ambulance call an ambulance",
+            "link_flair_richtext": [
+              {
+                "e": "text",
+                "t": "Humor [Original Content]"
+              }
+            ],
+            "subreddit_name_prefixed": "r/MobileLegendsGame",
+            "hidden": false,
+            "pwls": 6,
+            "link_flair_css_class": "",
+            "downs": 0,
+            "thumbnail_height": 65,
+            "top_awarded_type": null,
+            "hide_score": false,
+            "name": "t3_1oju96x",
+            "quarantine": false,
+            "link_flair_text_color": "light",
+            "upvote_ratio": 0.96,
+            "author_flair_background_color": null,
+            "ups": 35,
+            "total_awards_received": 0,
+            "media_embed": {
+
+            },
+            "thumbnail_width": 140,
+            "author_flair_template_id": null,
+            "is_original_content": false,
+            "author_fullname": "t2_7jvqekkj",
+            "secure_media": {
+              "reddit_video": {
+                "bitrate_kbps": 1200,
+                "fallback_url": "https://v.redd.it/ksps88ikn7yf1/DASH_480.mp4?source=fallback",
+                "has_audio": true,
+                "height": 398,
+                "width": 854,
+                "scrubber_media_url": "https://v.redd.it/ksps88ikn7yf1/DASH_96.mp4",
+                "dash_url": "https://v.redd.it/ksps88ikn7yf1/DASHPlaylist.mpd?a=1764437532%2CNWQ0NzZkZDQyMTBhNjFiN2YxYWZiOTVmMDU5ZWQzYTU5NDFlNzFlYmRhMmQ3YWUzZDFkN2FjNGMyZjQ3ZTk3Ng%3D%3D&amp;v=1&amp;f=sd",
+                "duration": 24,
+                "hls_url": "https://v.redd.it/ksps88ikn7yf1/HLSPlaylist.m3u8?a=1764437532%2CZTYzNzE3MzJhMThmMDJlNGE5NWIwNWNjZTVlNjc2MTU0YmVhYjBiODYyOGU1YzY0YzhkN2MyNDJkNWQwZTJmZQ%3D%3D&amp;v=1&amp;f=sd",
+                "is_gif": false,
+                "transcoding_status": "completed"
+              }
+            },
+            "is_reddit_media_domain": true,
+            "is_meta": false,
+            "category": null,
+            "secure_media_embed": {
+
+            },
+            "link_flair_text": "Humor [Original Content]",
+            "can_mod_post": false,
+            "score": 35,
+            "approved_by": null,
+            "is_created_from_ads_ui": false,
+            "author_premium": false,
+            "thumbnail": "https://external-preview.redd.it/bTY3cjE1aWtuN3lmMeDaqWy2W3YDEBgrVjSoOpxCPAF9mZwdnBUWiEwPVGwi.png?width=140&amp;height=65&amp;format=jpg&amp;auto=webp&amp;s=7874986161e0327d22e7115bde19f7a62e4bfca9",
+            "edited": false,
+            "author_flair_css_class": null,
+            "author_flair_richtext": [],
+            "gildings": {
+
+            },
+            "post_hint": "hosted:video",
+            "content_categories": null,
+            "is_self": false,
+            "subreddit_type": "public",
+            "created": 1761813339,
+            "link_flair_type": "richtext",
+            "wls": 6,
+            "removed_by_category": null,
+            "banned_by": null,
+            "author_flair_type": "text",
+            "domain": "v.redd.it",
+            "allow_live_comments": false,
+            "selftext_html": "&lt;!-- SC_OFF --&gt;&lt;div class=\"md\"&gt;&lt;p&gt;but not for me&lt;/p&gt;\n&lt;/div&gt;&lt;!-- SC_ON --&gt;",
+            "likes": null,
+            "suggested_sort": null,
+            "banned_at_utc": null,
+            "url_overridden_by_dest": "https://v.redd.it/ksps88ikn7yf1",
+            "view_count": null,
+            "archived": false,
+            "no_follow": false,
+            "is_crosspostable": true,
+            "pinned": false,
+            "over_18": false,
+            "preview": {
+              "images": [
+                {
+                  "source": {
+                    "url": "https://external-preview.redd.it/bTY3cjE1aWtuN3lmMeDaqWy2W3YDEBgrVjSoOpxCPAF9mZwdnBUWiEwPVGwi.png?format=pjpg&amp;auto=webp&amp;s=c5949db727b5c3ddccc08460ba63d6b7558f2d08",
+                    "width": 1080,
+                    "height": 504
+                  },
+                  "resolutions": [
+                    {
+                      "url": "https://external-preview.redd.it/bTY3cjE1aWtuN3lmMeDaqWy2W3YDEBgrVjSoOpxCPAF9mZwdnBUWiEwPVGwi.png?width=108&amp;crop=smart&amp;format=pjpg&amp;auto=webp&amp;s=568af75b88f5afb4285d7726e7c6f00b9516e8ee",
+                      "width": 108,
+                      "height": 50
+                    },
+                    {
+                      "url": "https://external-preview.redd.it/bTY3cjE1aWtuN3lmMeDaqWy2W3YDEBgrVjSoOpxCPAF9mZwdnBUWiEwPVGwi.png?width=216&amp;crop=smart&amp;format=pjpg&amp;auto=webp&amp;s=e752da8fba3c5ac0258185d1b4fd4970a7665294",
+                      "width": 216,
+                      "height": 100
+                    },
+                    {
+                      "url": "https://external-preview.redd.it/bTY3cjE1aWtuN3lmMeDaqWy2W3YDEBgrVjSoOpxCPAF9mZwdnBUWiEwPVGwi.png?width=320&amp;crop=smart&amp;format=pjpg&amp;auto=webp&amp;s=564fd8583930d128ae45c29844b4b684ec922de7",
+                      "width": 320,
+                      "height": 149
+                    },
+                    {
+                      "url": "https://external-preview.redd.it/bTY3cjE1aWtuN3lmMeDaqWy2W3YDEBgrVjSoOpxCPAF9mZwdnBUWiEwPVGwi.png?width=640&amp;crop=smart&amp;format=pjpg&amp;auto=webp&amp;s=8c61f62bebf51f8b3683cdb36cd35ec3f4cb6951",
+                      "width": 640,
+                      "height": 298
+                    },
+                    {
+                      "url": "https://external-preview.redd.it/bTY3cjE1aWtuN3lmMeDaqWy2W3YDEBgrVjSoOpxCPAF9mZwdnBUWiEwPVGwi.png?width=960&amp;crop=smart&amp;format=pjpg&amp;auto=webp&amp;s=0e8048622820e8dff3da0f19a774ed21eca17a08",
+                      "width": 960,
+                      "height": 448
+                    },
+                    {
+                      "url": "https://external-preview.redd.it/bTY3cjE1aWtuN3lmMeDaqWy2W3YDEBgrVjSoOpxCPAF9mZwdnBUWiEwPVGwi.png?width=1080&amp;crop=smart&amp;format=pjpg&amp;auto=webp&amp;s=91db016bae575ebed60f821a695beef2754cfa36",
+                      "width": 1080,
+                      "height": 504
+                    }
+                  ],
+                  "variants": {
+
+                  },
+                  "id": "bTY3cjE1aWtuN3lmMeDaqWy2W3YDEBgrVjSoOpxCPAF9mZwdnBUWiEwPVGwi"
+                }
+              ],
+              "enabled": false
+            },
+            "all_awardings": [],
+            "awarders": [],
+            "media_only": false,
+            "link_flair_template_id": "5433a832-8c9b-11ec-984e-866a2b73aae1",
+            "can_gild": false,
+            "spoiler": false,
+            "locked": false,
+            "author_flair_text": null,
+            "treatment_tags": [],
+            "visited": false,
+            "removed_by": null,
+            "mod_note": null,
+            "distinguished": null,
+            "subreddit_id": "t5_hfsb5",
+            "author_is_blocked": false,
+            "mod_reason_by": null,
+            "num_reports": null,
+            "removal_reason": null,
+            "link_flair_background_color": "#646d73",
+            "id": "1oju96x",
+            "is_robot_indexable": true,
+            "num_duplicates": 0,
+            "report_reasons": null,
+            "author": "XXJ99",
+            "discussion_type": null,
+            "num_comments": 6,
+            "send_replies": true,
+            "media": {
+              "reddit_video": {
+                "bitrate_kbps": 1200,
+                "fallback_url": "https://v.redd.it/ksps88ikn7yf1/DASH_480.mp4?source=fallback",
+                "has_audio": true,
+                "height": 398,
+                "width": 854,
+                "scrubber_media_url": "https://v.redd.it/ksps88ikn7yf1/DASH_96.mp4",
+                "dash_url": "https://v.redd.it/ksps88ikn7yf1/DASHPlaylist.mpd?a=1764437532%2CNWQ0NzZkZDQyMTBhNjFiN2YxYWZiOTVmMDU5ZWQzYTU5NDFlNzFlYmRhMmQ3YWUzZDFkN2FjNGMyZjQ3ZTk3Ng%3D%3D&amp;v=1&amp;f=sd",
+                "duration": 24,
+                "hls_url": "https://v.redd.it/ksps88ikn7yf1/HLSPlaylist.m3u8?a=1764437532%2CZTYzNzE3MzJhMThmMDJlNGE5NWIwNWNjZTVlNjc2MTU0YmVhYjBiODYyOGU1YzY0YzhkN2MyNDJkNWQwZTJmZQ%3D%3D&amp;v=1&amp;f=sd",
+                "is_gif": false,
+                "transcoding_status": "completed"
+              }
+            },
+            "contest_mode": false,
+            "author_patreon_flair": false,
+            "author_flair_text_color": null,
+            "permalink": "/r/MobileLegendsGame/comments/1oju96x/call_an_ambulance_call_an_ambulance/",
+            "stickied": false,
+            "url": "https://v.redd.it/ksps88ikn7yf1",
+            "subreddit_subscribers": 578357,
+            "created_utc": 1761813339,
+            "num_crossposts": 0,
+            "mod_reports": [],
+            "is_video": true
+          }
+        }
+      ],
+      "before": null
+    }
+  },
+  {
+    "kind": "Listing",
+    "data": {
+      "after": null,
+      "dist": null,
+      "modhash": "gc92cklqstc4c85624b662bcf9c4066b13c1d41a48aa7162c6",
+      "geo_filter": "",
+      "children": [
+        {
+          "kind": "t1",
+          "data": {
+            "subreddit_id": "t5_hfsb5",
+            "approved_at_utc": null,
+            "author_is_blocked": false,
+            "comment_type": null,
+            "awarders": [],
+            "mod_reason_by": null,
+            "banned_by": null,
+            "author_flair_type": "richtext",
+            "total_awards_received": 0,
+            "subreddit": "MobileLegendsGame",
+            "author_flair_template_id": "b298b51c-894d-11ec-9fe7-96a4cea85cea",
+            "likes": null,
+            "replies": {
+              "kind": "Listing",
+              "data": {
+                "after": null,
+                "dist": null,
+                "modhash": "gc92cklqstc4c85624b662bcf9c4066b13c1d41a48aa7162c6",
+                "geo_filter": "",
+                "children": [
+                  {
+                    "kind": "t1",
+                    "data": {
+                      "subreddit_id": "t5_hfsb5",
+                      "approved_at_utc": null,
+                      "author_is_blocked": false,
+                      "comment_type": null,
+                      "awarders": [],
+                      "mod_reason_by": null,
+                      "banned_by": null,
+                      "author_flair_type": "richtext",
+                      "total_awards_received": 0,
+                      "subreddit": "MobileLegendsGame",
+                      "author_flair_template_id": "b298b51c-894d-11ec-9fe7-96a4cea85cea",
+                      "likes": null,
+                      "replies": "",
+                      "user_reports": [],
+                      "saved": false,
+                      "id": "nm80854",
+                      "banned_at_utc": null,
+                      "mod_reason_title": null,
+                      "gilded": 0,
+                      "archived": false,
+                      "collapsed_reason_code": null,
+                      "no_follow": true,
+                      "author": "Isuckateverything9",
+                      "can_mod_post": false,
+                      "created_utc": 1761843606,
+                      "send_replies": true,
+                      "parent_id": "t1_nm5tnez",
+                      "score": 1,
+                      "author_fullname": "t2_1skqopibr8",
+                      "removal_reason": null,
+                      "approved_by": null,
+                      "mod_note": null,
+                      "all_awardings": [],
+                      "body": "fanny roam,a bit cursed but holy did it work\n\nhttps://preview.redd.it/ztu21uel5ayf1.jpeg?width=2200&amp;format=pjpg&amp;auto=webp&amp;s=c80ac11d63b8ccbcd3752827e4338bf19cf7d58d",
+                      "edited": false,
+                      "top_awarded_type": null,
+                      "author_flair_css_class": null,
+                      "name": "t1_nm80854",
+                      "is_submitter": false,
+                      "downs": 0,
+                      "author_flair_richtext": [
+                        {
+                          "e": "text",
+                          "t": "accidentaly joined the "
+                        },
+                        {
+                          "a": ":joy:",
+                          "u": "https://emoji.redditmedia.com/vo1lfav95lqd1_t5_hfsb5/joy",
+                          "e": "emoji"
+                        },
+                        {
+                          "a": ":joy1:",
+                          "u": "https://emoji.redditmedia.com/5n6u8cq95lqd1_t5_hfsb5/joy1",
+                          "e": "emoji"
+                        },
+                        {
+                          "a": ":joy2:",
+                          "u": "https://emoji.redditmedia.com/paqga0ea5lqd1_t5_hfsb5/joy2",
+                          "e": "emoji"
+                        },
+                        {
+                          "e": "text",
+                          "t": "agenda"
+                        }
+                      ],
+                      "author_patreon_flair": false,
+                      "body_html": "&lt;div class=\"md\"&gt;&lt;p&gt;fanny roam,a bit cursed but holy did it work&lt;/p&gt;\n\n&lt;p&gt;&lt;a href=\"https://preview.redd.it/ztu21uel5ayf1.jpeg?width=2200&amp;amp;format=pjpg&amp;amp;auto=webp&amp;amp;s=c80ac11d63b8ccbcd3752827e4338bf19cf7d58d\"&gt;https://preview.redd.it/ztu21uel5ayf1.jpeg?width=2200&amp;amp;format=pjpg&amp;amp;auto=webp&amp;amp;s=c80ac11d63b8ccbcd3752827e4338bf19cf7d58d&lt;/a&gt;&lt;/p&gt;\n&lt;/div&gt;",
+                      "gildings": {
+
+                      },
+                      "collapsed_reason": null,
+                      "distinguished": null,
+                      "associated_award": null,
+                      "stickied": false,
+                      "author_premium": false,
+                      "can_gild": false,
+                      "link_id": "t3_1oju96x",
+                      "unrepliable_reason": null,
+                      "author_flair_text_color": "dark",
+                      "score_hidden": false,
+                      "permalink": "/r/MobileLegendsGame/comments/1oju96x/call_an_ambulance_call_an_ambulance/nm80854/",
+                      "subreddit_type": "public",
+                      "locked": false,
+                      "report_reasons": null,
+                      "created": 1761843606,
+                      "media_metadata": {
+                        "ztu21uel5ayf1": {
+                          "status": "valid",
+                          "e": "Image",
+                          "m": "image/jpeg",
+                          "p": [
+                            {
+                              "y": 70,
+                              "x": 108,
+                              "u": "https://preview.redd.it/ztu21uel5ayf1.jpeg?width=108&amp;crop=smart&amp;auto=webp&amp;s=41ee630016ea8b3a75bc62b29c16d82b9cff5e19"
+                            },
+                            {
+                              "y": 141,
+                              "x": 216,
+                              "u": "https://preview.redd.it/ztu21uel5ayf1.jpeg?width=216&amp;crop=smart&amp;auto=webp&amp;s=17ffe6a63600c4169c578663cbd5b38395c73133"
+                            },
+                            {
+                              "y": 209,
+                              "x": 320,
+                              "u": "https://preview.redd.it/ztu21uel5ayf1.jpeg?width=320&amp;crop=smart&amp;auto=webp&amp;s=c4df13123872af97ff66ba5cba0fbe12daf77d74"
+                            },
+                            {
+                              "y": 418,
+                              "x": 640,
+                              "u": "https://preview.redd.it/ztu21uel5ayf1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=9cf9d651bb4dcf6e485c13585e9539eadde63c04"
+                            },
+                            {
+                              "y": 628,
+                              "x": 960,
+                              "u": "https://preview.redd.it/ztu21uel5ayf1.jpeg?width=960&amp;crop=smart&amp;auto=webp&amp;s=7da83f7249e34ced92d99975c4acdca1716940e5"
+                            },
+                            {
+                              "y": 706,
+                              "x": 1080,
+                              "u": "https://preview.redd.it/ztu21uel5ayf1.jpeg?width=1080&amp;crop=smart&amp;auto=webp&amp;s=4fc4ad5d666ce83edc08a56ae135b1b08ee17f47"
+                            }
+                          ],
+                          "s": {
+                            "y": 1440,
+                            "x": 2200,
+                            "u": "https://preview.redd.it/ztu21uel5ayf1.jpeg?width=2200&amp;format=pjpg&amp;auto=webp&amp;s=c80ac11d63b8ccbcd3752827e4338bf19cf7d58d"
+                          },
+                          "id": "ztu21uel5ayf1"
+                        }
+                      },
+                      "author_flair_text": "accidentaly joined the :joy::joy1::joy2:agenda",
+                      "treatment_tags": [],
+                      "collapsed": false,
+                      "subreddit_name_prefixed": "r/MobileLegendsGame",
+                      "controversiality": 0,
+                      "depth": 1,
+                      "author_flair_background_color": "transparent",
+                      "collapsed_because_crowd_control": null,
+                      "mod_reports": [],
+                      "num_reports": null,
+                      "ups": 1
+                    }
+                  }
+                ],
+                "before": null
+              }
+            },
+            "user_reports": [],
+            "saved": false,
+            "id": "nm5tnez",
+            "banned_at_utc": null,
+            "mod_reason_title": null,
+            "gilded": 0,
+            "archived": false,
+            "collapsed_reason_code": null,
+            "no_follow": false,
+            "author": "Past_Presence2184",
+            "can_mod_post": false,
+            "created_utc": 1761815810,
+            "send_replies": true,
+            "parent_id": "t3_1oju96x",
+            "score": 20,
+            "author_fullname": "t2_69hxw6a0x",
+            "approved_by": null,
+            "mod_note": null,
+            "all_awardings": [],
+            "collapsed": false,
+            "body": "https://preview.redd.it/woc2956xu7yf1.jpeg?width=412&amp;format=pjpg&amp;auto=webp&amp;s=983c9dc44a481282168b6176808358d50640b849\n\nGuardian VI",
+            "edited": false,
+            "top_awarded_type": null,
+            "author_flair_css_class": null,
+            "name": "t1_nm5tnez",
+            "is_submitter": false,
+            "downs": 0,
+            "author_flair_richtext": [
+              {
+                "a": ":ruby5:",
+                "u": "https://emoji.redditmedia.com/4vvz7fanglqd1_t5_hfsb5/ruby5",
+                "e": "emoji"
+              },
+              {
+                "a": ":ruby3:",
+                "u": "https://emoji.redditmedia.com/tmzrnblnglqd1_t5_hfsb5/ruby3",
+                "e": "emoji"
+              },
+              {
+                "a": ":ruby4:",
+                "u": "https://emoji.redditmedia.com/3uiyc4gnglqd1_t5_hfsb5/ruby4",
+                "e": "emoji"
+              },
+              {
+                "e": "text",
+                "t": "  Lifesteal Queen  "
+              },
+              {
+                "a": ":ruby6:",
+                "u": "https://emoji.redditmedia.com/xw6dfb3nglqd1_t5_hfsb5/ruby6",
+                "e": "emoji"
+              },
+              {
+                "a": ":ruby7:",
+                "u": "https://emoji.redditmedia.com/rhum99aoglqd1_t5_hfsb5/ruby7",
+                "e": "emoji"
+              },
+              {
+                "a": ":ruby1:",
+                "u": "https://emoji.redditmedia.com/w0zu9qynglqd1_t5_hfsb5/ruby1",
+                "e": "emoji"
+              }
+            ],
+            "author_patreon_flair": false,
+            "body_html": "&lt;div class=\"md\"&gt;&lt;p&gt;&lt;a href=\"https://preview.redd.it/woc2956xu7yf1.jpeg?width=412&amp;amp;format=pjpg&amp;amp;auto=webp&amp;amp;s=983c9dc44a481282168b6176808358d50640b849\"&gt;https://preview.redd.it/woc2956xu7yf1.jpeg?width=412&amp;amp;format=pjpg&amp;amp;auto=webp&amp;amp;s=983c9dc44a481282168b6176808358d50640b849&lt;/a&gt;&lt;/p&gt;\n\n&lt;p&gt;Guardian VI&lt;/p&gt;\n&lt;/div&gt;",
+            "removal_reason": null,
+            "collapsed_reason": null,
+            "distinguished": null,
+            "associated_award": null,
+            "stickied": false,
+            "author_premium": false,
+            "can_gild": false,
+            "gildings": {
+
+            },
+            "unrepliable_reason": null,
+            "author_flair_text_color": "dark",
+            "score_hidden": false,
+            "permalink": "/r/MobileLegendsGame/comments/1oju96x/call_an_ambulance_call_an_ambulance/nm5tnez/",
+            "subreddit_type": "public",
+            "locked": false,
+            "report_reasons": null,
+            "created": 1761815810,
+            "media_metadata": {
+              "woc2956xu7yf1": {
+                "status": "valid",
+                "e": "Image",
+                "m": "image/jpeg",
+                "p": [
+                  {
+                    "y": 76,
+                    "x": 108,
+                    "u": "https://preview.redd.it/woc2956xu7yf1.jpeg?width=108&amp;crop=smart&amp;auto=webp&amp;s=d044c376dcf5c87e6348d04fc5b4a8058b1b68e5"
+                  },
+                  {
+                    "y": 152,
+                    "x": 216,
+                    "u": "https://preview.redd.it/woc2956xu7yf1.jpeg?width=216&amp;crop=smart&amp;auto=webp&amp;s=0173427c5ea1716cc88025e40c80399a58e1970e"
+                  },
+                  {
+                    "y": 225,
+                    "x": 320,
+                    "u": "https://preview.redd.it/woc2956xu7yf1.jpeg?width=320&amp;crop=smart&amp;auto=webp&amp;s=4965be354745e36dbcfe621f98528e9883ab2a24"
+                  }
+                ],
+                "s": {
+                  "y": 290,
+                  "x": 412,
+                  "u": "https://preview.redd.it/woc2956xu7yf1.jpeg?width=412&amp;format=pjpg&amp;auto=webp&amp;s=983c9dc44a481282168b6176808358d50640b849"
+                },
+                "id": "woc2956xu7yf1"
+              }
+            },
+            "author_flair_text": ":ruby5::ruby3::ruby4:  Lifesteal Queen  :ruby6::ruby7::ruby1:",
+            "treatment_tags": [],
+            "link_id": "t3_1oju96x",
+            "subreddit_name_prefixed": "r/MobileLegendsGame",
+            "controversiality": 0,
+            "depth": 0,
+            "author_flair_background_color": "transparent",
+            "collapsed_because_crowd_control": null,
+            "mod_reports": [],
+            "num_reports": null,
+            "ups": 20
+          }
+        },
+        {
+          "kind": "t1",
+          "data": {
+            "subreddit_id": "t5_hfsb5",
+            "approved_at_utc": null,
+            "author_is_blocked": false,
+            "comment_type": null,
+            "awarders": [],
+            "mod_reason_by": null,
+            "banned_by": null,
+            "author_flair_type": "richtext",
+            "total_awards_received": 0,
+            "subreddit": "MobileLegendsGame",
+            "author_flair_template_id": "b298b51c-894d-11ec-9fe7-96a4cea85cea",
+            "likes": null,
+            "replies": "",
+            "user_reports": [],
+            "saved": false,
+            "id": "nm5u2xb",
+            "banned_at_utc": null,
+            "mod_reason_title": null,
+            "gilded": 0,
+            "archived": false,
+            "collapsed_reason_code": null,
+            "no_follow": false,
+            "author": "Otherwise_Reaction75",
+            "can_mod_post": false,
+            "created_utc": 1761816069,
+            "send_replies": true,
+            "parent_id": "t3_1oju96x",
+            "score": 10,
+            "author_fullname": "t2_bgx79jg0",
+            "approved_by": null,
+            "mod_note": null,
+            "all_awardings": [],
+            "collapsed": false,
+            "body": "Guardian-\n\nhttps://preview.redd.it/pifrf8npv7yf1.png?width=1080&amp;format=png&amp;auto=webp&amp;s=36ab5cc9b214f7e94e88c560b820b4e39347578b",
+            "edited": false,
+            "top_awarded_type": null,
+            "author_flair_css_class": null,
+            "name": "t1_nm5u2xb",
+            "is_submitter": false,
+            "downs": 0,
+            "author_flair_richtext": [
+              {
+                "a": ":ange8:",
+                "u": "https://emoji.redditmedia.com/8jy6u5v1ukqd1_t5_hfsb5/ange8",
+                "e": "emoji"
+              },
+              {
+                "e": "text",
+                "t": " Nyahahahaha!! Ks time~"
+              }
+            ],
+            "author_patreon_flair": false,
+            "body_html": "&lt;div class=\"md\"&gt;&lt;p&gt;Guardian-&lt;/p&gt;\n\n&lt;p&gt;&lt;a href=\"https://preview.redd.it/pifrf8npv7yf1.png?width=1080&amp;amp;format=png&amp;amp;auto=webp&amp;amp;s=36ab5cc9b214f7e94e88c560b820b4e39347578b\"&gt;https://preview.redd.it/pifrf8npv7yf1.png?width=1080&amp;amp;format=png&amp;amp;auto=webp&amp;amp;s=36ab5cc9b214f7e94e88c560b820b4e39347578b&lt;/a&gt;&lt;/p&gt;\n&lt;/div&gt;",
+            "removal_reason": null,
+            "collapsed_reason": null,
+            "distinguished": null,
+            "associated_award": null,
+            "stickied": false,
+            "author_premium": false,
+            "can_gild": false,
+            "gildings": {
+
+            },
+            "unrepliable_reason": null,
+            "author_flair_text_color": "dark",
+            "score_hidden": false,
+            "permalink": "/r/MobileLegendsGame/comments/1oju96x/call_an_ambulance_call_an_ambulance/nm5u2xb/",
+            "subreddit_type": "public",
+            "locked": false,
+            "report_reasons": null,
+            "created": 1761816069,
+            "media_metadata": {
+              "pifrf8npv7yf1": {
+                "status": "valid",
+                "e": "Image",
+                "m": "image/png",
+                "p": [
+                  {
+                    "y": 157,
+                    "x": 108,
+                    "u": "https://preview.redd.it/pifrf8npv7yf1.png?width=108&amp;crop=smart&amp;auto=webp&amp;s=e9e4f213e49546817a5b5c315d739029006b4e4f"
+                  },
+                  {
+                    "y": 314,
+                    "x": 216,
+                    "u": "https://preview.redd.it/pifrf8npv7yf1.png?width=216&amp;crop=smart&amp;auto=webp&amp;s=562afd1e2109317700c65213c4094d54dfe4f9a8"
+                  },
+                  {
+                    "y": 465,
+                    "x": 320,
+                    "u": "https://preview.redd.it/pifrf8npv7yf1.png?width=320&amp;crop=smart&amp;auto=webp&amp;s=c20ccd0dd38ae45840da343d98d8521240cfcca9"
+                  },
+                  {
+                    "y": 931,
+                    "x": 640,
+                    "u": "https://preview.redd.it/pifrf8npv7yf1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=1da9516c3cca5e554a6720451ca5cc5e8f70c7d2"
+                  },
+                  {
+                    "y": 1397,
+                    "x": 960,
+                    "u": "https://preview.redd.it/pifrf8npv7yf1.png?width=960&amp;crop=smart&amp;auto=webp&amp;s=fe7fa6e73a9c8553528b11f50e5a1e17028d54b0"
+                  },
+                  {
+                    "y": 1572,
+                    "x": 1080,
+                    "u": "https://preview.redd.it/pifrf8npv7yf1.png?width=1080&amp;crop=smart&amp;auto=webp&amp;s=6466515afc97d0d525cfb7a2143328cd984aa185"
+                  }
+                ],
+                "s": {
+                  "y": 1572,
+                  "x": 1080,
+                  "u": "https://preview.redd.it/pifrf8npv7yf1.png?width=1080&amp;format=png&amp;auto=webp&amp;s=36ab5cc9b214f7e94e88c560b820b4e39347578b"
+                },
+                "id": "pifrf8npv7yf1"
+              }
+            },
+            "author_flair_text": ":ange8: Nyahahahaha!! Ks time~",
+            "treatment_tags": [],
+            "link_id": "t3_1oju96x",
+            "subreddit_name_prefixed": "r/MobileLegendsGame",
+            "controversiality": 0,
+            "depth": 0,
+            "author_flair_background_color": "transparent",
+            "collapsed_because_crowd_control": null,
+            "mod_reports": [],
+            "num_reports": null,
+            "ups": 10
+          }
+        },
+        {
+          "kind": "t1",
+          "data": {
+            "subreddit_id": "t5_hfsb5",
+            "approved_at_utc": null,
+            "author_is_blocked": false,
+            "comment_type": null,
+            "awarders": [],
+            "mod_reason_by": null,
+            "banned_by": null,
+            "author_flair_type": "richtext",
+            "total_awards_received": 0,
+            "subreddit": "MobileLegendsGame",
+            "author_flair_template_id": "b298b51c-894d-11ec-9fe7-96a4cea85cea",
+            "likes": null,
+            "replies": "",
+            "user_reports": [],
+            "saved": false,
+            "id": "nm616os",
+            "banned_at_utc": null,
+            "mod_reason_title": null,
+            "gilded": 0,
+            "archived": false,
+            "collapsed_reason_code": null,
+            "no_follow": false,
+            "author": "Raihan_Brine",
+            "can_mod_post": false,
+            "created_utc": 1761819991,
+            "send_replies": true,
+            "parent_id": "t3_1oju96x",
+            "score": 7,
+            "author_fullname": "t2_t4mldgsb2",
+            "approved_by": null,
+            "mod_note": null,
+            "all_awardings": [],
+            "collapsed": false,
+            "body": "Damn that was go- IS THAT GUARDIAN 6!",
+            "edited": false,
+            "top_awarded_type": null,
+            "author_flair_css_class": null,
+            "name": "t1_nm616os",
+            "is_submitter": false,
+            "downs": 0,
+            "author_flair_richtext": [
+              {
+                "a": ":loli1:",
+                "u": "https://emoji.redditmedia.com/nd2kpsys8lqd1_t5_hfsb5/loli1",
+                "e": "emoji"
+              },
+              {
+                "a": ":ange10:",
+                "u": "https://emoji.redditmedia.com/6lf4cil3hjhe1_t5_hfsb5/ange10",
+                "e": "emoji"
+              },
+              {
+                "a": ":flor5:",
+                "u": "https://emoji.redditmedia.com/qu8g8br91lqd1_t5_hfsb5/flor5",
+                "e": "emoji"
+              },
+              {
+                "e": "text",
+                "t": " Support boy looking for hyper mommy."
+              }
+            ],
+            "author_patreon_flair": false,
+            "body_html": "&lt;div class=\"md\"&gt;&lt;p&gt;Damn that was go- IS THAT GUARDIAN 6!&lt;/p&gt;\n&lt;/div&gt;",
+            "removal_reason": null,
+            "collapsed_reason": null,
+            "distinguished": null,
+            "associated_award": null,
+            "stickied": false,
+            "author_premium": false,
+            "can_gild": false,
+            "gildings": {
+
+            },
+            "unrepliable_reason": null,
+            "author_flair_text_color": "dark",
+            "score_hidden": false,
+            "permalink": "/r/MobileLegendsGame/comments/1oju96x/call_an_ambulance_call_an_ambulance/nm616os/",
+            "subreddit_type": "public",
+            "locked": false,
+            "report_reasons": null,
+            "created": 1761819991,
+            "author_flair_text": ":loli1::ange10::flor5: Support boy looking for hyper mommy.",
+            "treatment_tags": [],
+            "link_id": "t3_1oju96x",
+            "subreddit_name_prefixed": "r/MobileLegendsGame",
+            "controversiality": 0,
+            "depth": 0,
+            "author_flair_background_color": "transparent",
+            "collapsed_because_crowd_control": null,
+            "mod_reports": [],
+            "num_reports": null,
+            "ups": 7
+          }
+        },
+        {
+          "kind": "t1",
+          "data": {
+            "subreddit_id": "t5_hfsb5",
+            "approved_at_utc": null,
+            "author_is_blocked": false,
+            "comment_type": null,
+            "awarders": [],
+            "mod_reason_by": null,
+            "banned_by": null,
+            "author_flair_type": "text",
+            "total_awards_received": 0,
+            "subreddit": "MobileLegendsGame",
+            "author_flair_template_id": null,
+            "likes": null,
+            "replies": "",
+            "user_reports": [],
+            "saved": false,
+            "id": "nm5tiz1",
+            "banned_at_utc": null,
+            "mod_reason_title": null,
+            "gilded": 0,
+            "archived": false,
+            "collapsed_reason_code": null,
+            "no_follow": true,
+            "author": "Upstairs-Display-120",
+            "can_mod_post": false,
+            "created_utc": 1761815735,
+            "send_replies": true,
+            "parent_id": "t3_1oju96x",
+            "score": 2,
+            "author_fullname": "t2_1ft70sgv0v",
+            "approved_by": null,
+            "mod_note": null,
+            "all_awardings": [],
+            "collapsed": false,
+            "body": "Cool ass",
+            "edited": false,
+            "top_awarded_type": null,
+            "author_flair_css_class": null,
+            "name": "t1_nm5tiz1",
+            "is_submitter": false,
+            "downs": 0,
+            "author_flair_richtext": [],
+            "author_patreon_flair": false,
+            "body_html": "&lt;div class=\"md\"&gt;&lt;p&gt;Cool ass&lt;/p&gt;\n&lt;/div&gt;",
+            "removal_reason": null,
+            "collapsed_reason": null,
+            "distinguished": null,
+            "associated_award": null,
+            "stickied": false,
+            "author_premium": false,
+            "can_gild": false,
+            "gildings": {
+
+            },
+            "unrepliable_reason": null,
+            "author_flair_text_color": null,
+            "score_hidden": false,
+            "permalink": "/r/MobileLegendsGame/comments/1oju96x/call_an_ambulance_call_an_ambulance/nm5tiz1/",
+            "subreddit_type": "public",
+            "locked": false,
+            "report_reasons": null,
+            "created": 1761815735,
+            "author_flair_text": null,
+            "treatment_tags": [],
+            "link_id": "t3_1oju96x",
+            "subreddit_name_prefixed": "r/MobileLegendsGame",
+            "controversiality": 0,
+            "depth": 0,
+            "author_flair_background_color": null,
+            "collapsed_because_crowd_control": null,
+            "mod_reports": [],
+            "num_reports": null,
+            "ups": 2
+          }
+        },
+        {
+          "kind": "t1",
+          "data": {
+            "subreddit_id": "t5_hfsb5",
+            "approved_at_utc": null,
+            "author_is_blocked": false,
+            "comment_type": null,
+            "awarders": [],
+            "mod_reason_by": null,
+            "banned_by": null,
+            "author_flair_type": "richtext",
+            "total_awards_received": 0,
+            "subreddit": "MobileLegendsGame",
+            "author_flair_template_id": "b298b51c-894d-11ec-9fe7-96a4cea85cea",
+            "likes": null,
+            "replies": "",
+            "user_reports": [],
+            "saved": false,
+            "id": "nm7hvbg",
+            "banned_at_utc": null,
+            "mod_reason_title": null,
+            "gilded": 0,
+            "archived": false,
+            "collapsed_reason_code": null,
+            "no_follow": true,
+            "author": "Michvito",
+            "can_mod_post": false,
+            "created_utc": 1761838380,
+            "send_replies": true,
+            "parent_id": "t3_1oju96x",
+            "score": 1,
+            "author_fullname": "t2_7u4zp96x9",
+            "approved_by": null,
+            "mod_note": null,
+            "all_awardings": [],
+            "collapsed": false,
+            "body": "~~what in the flying sauce murder machine is this~~\n\nThis is literally what i mean by fanny outplays smh my head",
+            "edited": false,
+            "top_awarded_type": null,
+            "author_flair_css_class": null,
+            "name": "t1_nm7hvbg",
+            "is_submitter": false,
+            "downs": 0,
+            "author_flair_richtext": [
+              {
+                "e": "text",
+                "t": "exp lane laughy enthusiast"
+              },
+              {
+                "a": ":fann10:",
+                "u": "https://emoji.redditmedia.com/x2ya0owxam3e1_t5_hfsb5/fann10",
+                "e": "emoji"
+              },
+              {
+                "a": ":fann8:",
+                "u": "https://emoji.redditmedia.com/mnl797hz0lqd1_t5_hfsb5/fann8",
+                "e": "emoji"
+              },
+              {
+                "e": "text",
+                "t": "(join dc server ;3) "
+              }
+            ],
+            "author_patreon_flair": false,
+            "body_html": "&lt;div class=\"md\"&gt;&lt;p&gt;&lt;del&gt;what in the flying sauce murder machine is this&lt;/del&gt;&lt;/p&gt;\n\n&lt;p&gt;This is literally what i mean by fanny outplays smh my head&lt;/p&gt;\n&lt;/div&gt;",
+            "removal_reason": null,
+            "collapsed_reason": null,
+            "distinguished": null,
+            "associated_award": null,
+            "stickied": false,
+            "author_premium": false,
+            "can_gild": false,
+            "gildings": {
+
+            },
+            "unrepliable_reason": null,
+            "author_flair_text_color": "dark",
+            "score_hidden": false,
+            "permalink": "/r/MobileLegendsGame/comments/1oju96x/call_an_ambulance_call_an_ambulance/nm7hvbg/",
+            "subreddit_type": "public",
+            "locked": false,
+            "report_reasons": null,
+            "created": 1761838380,
+            "author_flair_text": "exp lane laughy enthusiast:fann10::fann8:(join dc server ;3) ",
+            "treatment_tags": [],
+            "link_id": "t3_1oju96x",
+            "subreddit_name_prefixed": "r/MobileLegendsGame",
+            "controversiality": 0,
+            "depth": 0,
+            "author_flair_background_color": "transparent",
+            "collapsed_because_crowd_control": null,
+            "mod_reports": [],
+            "num_reports": null,
+            "ups": 1
+          }
+        }
+      ],
+      "before": null
+    }
+  }
+]

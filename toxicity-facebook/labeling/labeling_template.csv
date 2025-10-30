@@ -1,2 +1,0 @@
-# Instruksi: Beri label 1 jika teks mengandung ujaran kebencian, hinaan personal, ancaman, atau makian kasar; beri label 0 jika tidak.
-id,page,time,text,text_clean,label
