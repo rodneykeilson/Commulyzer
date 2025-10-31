@@ -1,0 +1,56 @@
+# Regex\tIntensity
+\bidiot(ic)?\b\t1.2
+\bmoron(ic)?\b\t1.2
+\bstupid\b\t1.2
+\bdumb(?:ass+)?\b\t1.2
+\bloser\b\t1.2
+\btrash(?:bag|can|tier)?\b\t1.4
+\bbrain[-\s]?dead\b\t1.6
+\bnoob\b\t1.0
+\bclown\b\t1.0
+\bdogwater\b\t1.3
+\bgarbage\b\t1.2
+\bpathetic\b\t1.3
+\bworthless\b\t1.4
+\btrashplayer\b\t1.4
+\bfeeder\b\t1.0
+\bcry(?:baby|\s*more)?\b\t1.0
+\bmalde[rt]\b\t1.0
+\bskill\s*issue\b\t1.2
+\bgit\s*gud\b\t1.0
+\bez\b\t1.0
+\bnpc\b\t1.0
+\btrash\s*team(mate)?\b\t1.4
+\bgoblok\b\t1.3
+\btolol\b\t1.3
+\bbangsat\b\t1.4
+\bkampret\b\t1.1
+\basu\b\t1.1
+\bbodoh\b\t1.2
+\bg[a4]go\b\t1.3
+\btanga\b\t1.3
+\bbobo\b\t1.2
+\bidiota\b\t1.2
+\best[u\\u00fa]pido\b\t1.3
+\bcabro[n\\u00f1]\b\t1.5
+\bimb[e\\u00e9]cil\b\t1.3
+\bpendejo\b\t1.4
+\bgilipollas\b\t1.4
+\bbrainlet\b\t1.2
+\bscrub\b\t1.0
+\bpleb\b\t1.0
+\buseless\b\t1.1
+\bclueless\b\t1.1
+\bdelusional\b\t1.1
+\bincompetent\b\t1.2
+\byou(?:'re| are)\s+a\s+bot\b\t1.2
+\byou(?:'re| are)\s+trash\b\t1.4
+\byou(?:'re| are)\s+useless\b\t1.3
+\byour\s+brain\s+is\b\t1.2
+\bint(?:ing)?\b\t1.1
+\bthrower\b\t1.1
+\bbrain damage\b\t1.3
+\bdeadweight\b\t1.4
+\bwaste of space\b\t1.5
+\bbozo\b\t1.1
+\bpepega\b\t1.2

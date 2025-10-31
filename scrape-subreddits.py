@@ -262,6 +262,138 @@ def flatten_comments(post_json: Any, post_context: dict[str, Any]) -> List[dict[
     return records
 
 
+def rebuild_csv_from_cache(subreddit: str) -> None:
+    """Recreate CSV summaries from previously saved JSON artifacts."""
+    base_dir = DATA_ROOT / subreddit
+    posts_dir = base_dir / "post_jsons"
+    links_path = base_dir / "links.json"
+    if not posts_dir.exists():
+        raise FileNotFoundError(f"No cached post_jsons/ directory for r/{subreddit} (expected {posts_dir})")
+
+    links: list[dict[str, Any]] = []
+    if links_path.exists():
+        try:
+            links = json.loads(links_path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as exc:
+            print(f"[WARN] Failed to parse {links_path}: {exc}. Continuing without link metadata.")
+
+    link_map: dict[str, dict[str, Any]] = {}
+    for entry in links:
+        if isinstance(entry, dict):
+            post_id = str(entry.get("id") or "").strip()
+            if post_id:
+                link_map[post_id] = entry
+
+    posts_records: List[dict[str, Any]] = []
+    comments_records: List[dict[str, Any]] = []
+
+    json_files = sorted(posts_dir.glob("*.json"))
+    for idx, path in enumerate(json_files, start=1):
+        try:
+            post_json = json.loads(path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as exc:
+            print(f"[WARN] Skipping {path.name}: invalid JSON ({exc})")
+            continue
+
+        post_data: dict[str, Any] | None = None
+        if isinstance(post_json, list) and post_json:
+            first = post_json[0]
+            if isinstance(first, dict):
+                children = first.get("data", {}).get("children", [])
+                if children:
+                    maybe_post = children[0].get("data")
+                    if isinstance(maybe_post, dict):
+                        post_data = maybe_post
+        if post_data is None:
+            post_data = {}
+
+        post_id = str(post_data.get("id") or "").strip()
+        link_info = link_map.get(post_id, {})
+        if not link_info:
+            link_info = {
+                "rank": idx,
+                "id": post_data.get("id") or path.stem,
+                "title": post_data.get("title"),
+                "created_utc": post_data.get("created_utc"),
+                "permalink": post_data.get("permalink"),
+                "url": post_data.get("permalink"),
+            }
+        else:
+            link_info = dict(link_info)
+            link_info.setdefault("rank", idx)
+
+        post_record = flatten_post_record(subreddit, link_info, post_data)
+        posts_records.append(post_record)
+        comments_records.extend(
+            flatten_comments(
+                post_json,
+                {
+                    "post_id": post_record.get("post_id"),
+                    "rank": post_record.get("rank"),
+                    "title": post_record.get("title"),
+                    "subreddit": post_record.get("subreddit"),
+                },
+            )
+        )
+
+    if not posts_records:
+        print(f"[WARN] No posts reconstructed for r/{subreddit}")
+        return
+
+    def _rank_key(value: Any) -> float:
+        try:
+            return float(value)
+        except (TypeError, ValueError):
+            return float("inf")
+
+    posts_records.sort(key=lambda r: (_rank_key(r.get("rank")), r.get("created_utc") or 0))
+
+    posts_csv_path = base_dir / "posts.csv"
+    comments_csv_path = base_dir / "comments.csv"
+    write_csv(
+        posts_records,
+        [
+            "rank",
+            "post_id",
+            "title",
+            "author",
+            "subreddit",
+            "created_utc",
+            "created_iso",
+            "score",
+            "upvote_ratio",
+            "num_comments",
+            "permalink",
+            "url",
+            "selftext",
+            "link_flair_text",
+            "over_18",
+        ],
+        posts_csv_path,
+    )
+    write_csv(
+        comments_records,
+        [
+            "post_id",
+            "post_rank",
+            "post_title",
+            "subreddit",
+            "comment_id",
+            "parent_id",
+            "author",
+            "created_utc",
+            "created_iso",
+            "score",
+            "depth",
+            "body",
+            "permalink",
+            "is_submitter",
+        ],
+        comments_csv_path,
+    )
+    print(f"Rebuilt CSV summaries for r/{subreddit} at {posts_csv_path} and {comments_csv_path}")
+
+
 def process_subreddit(
     subreddit: str,
     *,
@@ -433,6 +565,11 @@ def parse_args() -> argparse.Namespace:
         help="Disable TLS certificate verification (only if you trust the network).",
     )
     parser.add_argument(
+        "--rebuild-from-json",
+        action="store_true",
+        help="Recreate CSV outputs from previously saved JSON files without new network calls.",
+    )
+    parser.add_argument(
         "--output-format",
         choices=["json", "csv", "both"],
         default="json",
@@ -447,6 +584,14 @@ def main() -> None:
     if not subreddits:
         print("No subreddits provided. Exiting.")
         sys.exit(0)
+
+    if args.rebuild_from_json:
+        for subreddit in subreddits:
+            try:
+                rebuild_csv_from_cache(subreddit)
+            except Exception as exc:
+                print(f"Failed to rebuild CSV for r/{subreddit}: {exc}", file=sys.stderr)
+        return
 
     session = build_session(args.user_agent, not args.insecure)
 

@@ -1,0 +1,27 @@
+# Regex\tIntensity
+\bhate\b\t0.8
+\bsuck(s|ed|ing)?\b\t1.0
+\bstfu\t1.5
+\bshut\s*up\b\t1.0
+\buninstall(?: the)? game\b\t1.0
+\buninstall\b\t0.8
+\bdelete the game\b\t1.1
+\byou(?:'re| are)\s+so\b\t0.8
+\byou\s+(?:are|'re)\s+(?:trash|bad|awful|terrible)\b\t1.2
+\bwtf\b\t1.0
+\bgtfo\b\t1.4
+\btrash\s*talk\b\t1.0
+\bcope\b\t0.8
+\bcope\s+harder\b\t1.2
+\bstay\s+mad\b\t1.0
+\bcry\s*more\b\t1.0
+\bl\s*\+\s*ratio\b\t1.2
+\bseethe\b\t0.8
+\bimagine\s+being\b\t1.0
+\bkeep\s+crying\b\t1.0
+\bgit\s*gud\b\t1.0
+\bget\s+good\b\t1.0
+\byou\s+play\s+like\b\t1.1
+\bthis\s+game\s+sucks\b\t1.2
+\bgod\s+damn\b\t1.0
+\btrash\s+build\b\t1.0

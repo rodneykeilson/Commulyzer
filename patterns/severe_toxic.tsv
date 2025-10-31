@@ -1,0 +1,28 @@
+# Regex\tIntensity
+\bkill (yourself|urself)\b\t3.0
+\bkys\b\t3.0
+\bdie in (?:a\s*)?fire\b\t2.8
+\bdrop dead\b\t2.5
+\bhope you die\b\t2.5
+\br[a@]pe\b\t3.0
+\bslaughter\b\t2.5
+\bgenocid(e|al)\b\t3.0
+\bgo (?:kill|hang) yourself\b\t3.0
+\bhang yourself\b\t3.0
+\bunalive yourself\b\t3.0
+\boff yourself\b\t3.0
+\byou should die\b\t2.5
+\bi wish you (?:were dead|died)\b\t2.5
+\bhope you get (?:cancer|aids)\b\t3.0
+\bhope you catch (?:cancer|aids)\b\t3.0
+\bhope cancer\b\t3.0
+\bget (?:cancer|aids)\b\t3.0
+\bbleed out\b\t2.5
+\bhope you (?:suffer|rot)\b\t2.4
+\bhope you (?:burn|rot) in hell\b\t2.6
+\byou deserve to die\b\t3.0
+\bshould die\b\t3.0
+\bfucking die\b\t2.8
+\bkill yourself now\b\t3.0
+\bdrink bleach\b\t3.0
+\bjump off a cliff\b\t2.8
