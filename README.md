@@ -1,38 +1,56 @@
 # Commulyzer
 
-Commulyzer at its current state collects community discussion data from Reddit for downstream machine
-learning tasks.
+Commulyzer collects Reddit community discussions, normalises the raw data, and produces rule-based toxicity labels for downstream analysis.
 
-## Features
+## Capabilities
 
-- Fetch up to the top 100 posts JSON for any subreddit via `scrape-subreddits.py`.
-- Persist listing metadata (`posts.json`), extracted permalinks (`links.json`),
-  and the 1:1 post payloads under `post_jsons/` when JSON output is enabled.
-- Optionally emit `posts.csv` and `comments.csv` flattened summaries for each subreddit.
-- Automatically clamp request limits to Reddit's caps (100 posts, 500 comments) and
-  generate hash-shortened filenames to avoid OS path limits.
-- Respectful scraping defaults: browser-like headers, retries with backoff,
-  and a 30-second delay between post fetches.
-- Works with multiple subreddits in a single run; each subreddit gets its own
-  directory under `data/raw/reddit/`.
+- Scrape top-post listings, permalinks, and full post/comment payloads with `scrape-subreddits.py` (multiple subreddits per run).
+- Regenerate `posts.csv` and `comments.csv` later without re-scraping via `--rebuild-from-json`.
+- Merge every `comments.csv` under `data/raw/reddit/` into a single dataset with `merge_comments.py` (adds a `source_subreddit` column).
+- Run `label-comments.py` to assign multilabel toxicity scores (toxic, severe_toxic, obscene, threat, insult, identity_hate, racism) plus per-subreddit statistics.
+- Maintain extensible regex libraries under `patterns/`—drop additional TSV rows to expand coverage without code changes.
 
-## Usage
+## Setup
 
 ```powershell
 # install dependencies
-pip install requests
+pip install requests pandas tqdm
 
-# a VPN may be required where reddit.com is blocked
-python scrape-subreddits.py subreddit1 subreddit2 --output-format both
+# optional: confirm CLI options
+python scrape-subreddits.py --help
+python label-comments.py --help
 ```
 
-Outputs are written to `data/raw/reddit/<subreddit>/`. Use `--output-format csv`
-or `--output-format both` to enable CSV summaries. You can override the number
-of posts (max 100), comment limit (max 500), per-request delay, time filter
-(top of day/week/etc.), and TLS verification via CLI flags (`python
-scrape-subreddits.py --help`).
+## Typical Workflow
 
-## Roadmap
+```powershell
+# 1. Scrape one or more subreddits (JSON + CSV outputs)
+python scrape-subreddits.py MobileLegendsGame FortniteBR --output-format both
 
-- Flatten the collected JSON/CSV into a unified tabular dataset.
-- Add assisted labeling tools for downstream modeling.
+# 2. (Optional) Rebuild CSVs later from cached JSON without new network calls
+python scrape-subreddits.py MobileLegendsGame --rebuild-from-json
+
+# 3. Merge all subreddit comments into a single file
+python merge-comments.py
+# -> data/processed/merged/merged_comments.csv
+
+# 4. Label the merged dataset (creates *_labeled.csv next to the input)
+python label-comments.py --input data/processed/merged/merged_comments.csv
+# -> data/processed/merged/merged_comments_labeled.csv
+```
+
+The labeling script prints overall totals and per-subreddit toxicity ratios. When you pass `--threshold` the binary cut-off changes (default 0.5). Override the pattern directory or provide extra regexes with `--pattern-dir` and `--extra-patterns-dir` respectively.
+
+## Data Layout
+
+- `data/raw/reddit/<subreddit>/` – scraped assets (`posts.json`, `links.json`, `post_jsons/*.json`, optional CSVs).
+- `data/processed/merged/` – merged and labeled comment datasets.
+- `patterns/` – base regex TSV files per label (`<label>.tsv`).
+
+The generated CSVs retain all original comment metadata and add `_score`, `_bin`, and a `labels` column containing the active tags.
+
+## Notes
+
+- All pattern files include offensive language solely for detection purposes.
+- Respect Reddit rate limits; tune `--delay`, `--limit`, and `--comment-limit` as needed.
+- A VPN or proxy may be required where reddit.com is blocked.

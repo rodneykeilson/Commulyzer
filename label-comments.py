@@ -1,30 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Enhanced rule-based multilabel annotator for Reddit comments.
+"""Rule-based multilabel annotator for Reddit comments.
 
-Improvements over baseline:
-- Much larger coverage of insults, slang, misspellings, and multilingual terms (EN, ID, TL, ES)
-- Negation sensitivity (e.g., "not stupid", "never hated you")
-- Severity scoring (normalized 0..1) in addition to binary labels
-- Pluggable pattern extension via external TSV files per label (optional)
+This script scores each comment against six toxicity dimensions plus racism, using
+regex libraries sourced from TSV files and a negation-aware severity formula. It
+emits both severity scores (0..1) and binary flags for every label, plus a joined
+"labels" column for quick inspection. Usage examples:
 
-Outputs:
-- For each of the 6 labels: <label>_bin (0/1) and <label>_score (0..1)
-- 'labels' column: pipe-separated active labels by binary decision
+    python label-comments.py --input data/processed/merged/merged_comments.csv --output data/processed/labeled/labeled_comments.csv
+    python label-comments.py --input ... --output ... --threshold 0.4
+    python label-comments.py --input ... --pattern-dir patterns --extra-patterns-dir custom
 
-Usage:
-    python label_comments.py \
-        --input data/raw/reddit/MobileLegendsGame/comments.csv \
-        [--output data/raw/reddit/MobileLegendsGame/comments_labeled.csv] \
-        [--inplace] \
-        [--threshold 0.5] \
-        [--pattern-dir patterns/] \
-        [--extra-patterns-dir extra_patterns/]
-
-Notes:
-- This is for moderation research/classwork. It contains offensive language examples used ONLY to detect toxicity.
-- Base regex libraries live in patterns/<label>.tsv and can be extended via --extra-patterns-dir.
+All regex lists contain offensive language purely for detection purposes.
 """
 
 from __future__ import annotations
@@ -49,6 +36,7 @@ LABELS = [
     "threat",
     "insult",
     "identity_hate",
+    "racism",
 ]
 
 DEFAULT_PATTERN_DIR = Path(__file__).resolve().parent / "patterns"
@@ -205,7 +193,7 @@ def annotate_text(text: str, patterns_all: Dict[str, List[PatternSpec]]) -> Dict
         scores[f"{lab}_score"] = score_label(stripped, tokens, pat)
 
     # Ensure baseline toxic label mirrors stronger classes so single insults count as toxic
-    co = ["severe_toxic", "threat", "obscene", "insult", "identity_hate"]
+    co = ["severe_toxic", "threat", "obscene", "insult", "identity_hate", "racism"]
     max_co = max(scores[f"{c}_score"] for c in co)
     scores["toxic_score"] = max(scores["toxic_score"], max_co)
 
@@ -289,6 +277,31 @@ def main():
     for lab in LABELS:
         c = int(df[f"{lab}_bin"].sum())
         print(f"  {lab:14s}: {c}")
+
+    source_col = "source_subreddit" if "source_subreddit" in df.columns else None
+    total_rows = len(df)
+    toxic_rows = int(df["toxic_bin"].sum())
+    clean_rows = total_rows - toxic_rows
+    toxic_pct = (toxic_rows / total_rows * 100) if total_rows else 0.0
+    print(f"\nOverall toxic rows: {toxic_rows}/{total_rows} ({toxic_pct:.2f}%)")
+    print(f"Overall non-toxic rows: {clean_rows}/{total_rows} ({100 - toxic_pct:.2f}%)")
+
+    if source_col:
+        print("\nPer-subreddit stats:")
+        grouped = df.groupby(source_col, sort=True)
+        for subreddit, grp in grouped:
+            size = len(grp)
+            tox = int(grp["toxic_bin"].sum())
+            clean = size - tox
+            pct = (tox / size * 100) if size else 0.0
+            print(f"  r/{subreddit}: {tox}/{size} toxic ({pct:.2f}%), {clean} clean")
+            for lab in LABELS:
+                if lab == "toxic":
+                    continue
+                lab_count = int(grp[f"{lab}_bin"].sum())
+                if lab_count:
+                    print(f"    {lab:14s}: {lab_count}")
+
     print("\nDone.")
 
 
