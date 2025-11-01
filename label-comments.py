@@ -138,7 +138,7 @@ def match_with_negation(text: str, tokens: List[str], patterns: List[PatternSpec
     Return (count_matches, total_intensity) after applying negation sensitivity.
     We estimate token start index via a second pass: take the start char index and map to token index.
     """
-    count = 0
+    count = 0   
     intensity_sum = 0.0
 
     # Map char positions to token indices to approximate start index

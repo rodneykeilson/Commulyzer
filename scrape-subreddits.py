@@ -31,7 +31,7 @@ DEFAULT_USER_AGENT = (
 )
 BASE_URL = "https://www.reddit.com"
 DATA_ROOT = Path(__file__).resolve().parent / "data" / "raw" / "reddit"
-
+ 
 
 def parse_subreddits(args_subreddits: Sequence[str]) -> List[str]:
     if args_subreddits:
