@@ -1,0 +1,19 @@
+# Core data processing
+pandas>=2.0
+numpy>=1.26
+scikit-learn>=1.4
+tqdm>=4.66
+joblib>=1.3
+iterative-stratification>=0.1.7
+
+# NLP / modeling
+torch>=2.1
+transformers>=4.40
+accelerate>=0.30
+evaluate>=0.4
+
+# Data acquisition
+requests>=2.31
+
+# Optional visualization
+matplotlib>=3.8
