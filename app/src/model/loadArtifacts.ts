@@ -23,6 +23,9 @@ const vocabularyChunkLoaders: Record<string, () => Promise<VocabularyChunk>> = {
   'vocabulary_005.json': async () =>
     (await import('../../assets/model/vocabulary_005.json'))
       .default as VocabularyChunk,
+  'vocabulary_006.json': async () =>
+    (await import('../../assets/model/vocabulary_006.json'))
+      .default as VocabularyChunk,
 };
 
 function coerceVectorizer(config: any): TfidfMetadata {

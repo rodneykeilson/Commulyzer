@@ -40,7 +40,7 @@ python label-comments.py --input data/processed/merged/merged_comments.csv
 # -> data/processed/merged/merged_comments_labeled.csv
 
 # 5. (Optional) Clean the labeled file (removes blank bodies, deduplicates comment text)
-python clean_comments.py --input data/processed/merged/merged_comments_labeled.csv
+python clean-comments.py --input data/processed/merged/merged_comments_labeled.csv
 # -> data/processed/merged/merged_comments_labeled_cleaned.csv
 ```
 

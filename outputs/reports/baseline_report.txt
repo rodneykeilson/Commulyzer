@@ -1,9 +1,9 @@
 [Baseline] Test metrics (calibrated)
-Micro-F1=0.962  Macro-F1=0.841
-toxic            AP=0.982  ROC-AUC=0.997  P=0.961 R=0.964 F1=0.962 thr=0.60
-severe_toxic     AP=0.629  ROC-AUC=0.996  P=0.615 R=0.571 F1=0.593 thr=0.65
-obscene          AP=0.985  ROC-AUC=0.998  P=0.962 R=0.987 F1=0.975 thr=0.55
-threat           AP=0.702  ROC-AUC=0.997  P=0.690 R=0.667 F1=0.678 thr=0.85
-insult           AP=0.977  ROC-AUC=0.999  P=0.934 R=0.968 F1=0.951 thr=0.70
-identity_hate    AP=0.855  ROC-AUC=0.984  P=0.783 R=0.856 F1=0.818 thr=0.20
-racism           AP=0.889  ROC-AUC=0.986  P=0.912 R=0.908 F1=0.910 thr=0.40
+Micro-F1=0.957  Macro-F1=0.858  Subset-Acc=0.990  Subset-Err=0.010
+toxic            AP=0.976  ROC-AUC=0.997  P=0.956 R=0.959 F1=0.957 thr=0.65
+severe_toxic     AP=0.852  ROC-AUC=1.000  P=0.786 R=0.805 F1=0.795 thr=0.50
+obscene          AP=0.980  ROC-AUC=0.998  P=0.963 R=0.981 F1=0.972 thr=0.65
+threat           AP=0.762  ROC-AUC=0.999  P=0.799 R=0.633 F1=0.706 thr=0.95
+insult           AP=0.968  ROC-AUC=0.998  P=0.931 R=0.960 F1=0.945 thr=0.75
+identity_hate    AP=0.814  ROC-AUC=0.980  P=0.869 R=0.629 F1=0.730 thr=0.65
+racism           AP=0.906  ROC-AUC=0.988  P=0.905 R=0.901 F1=0.903 thr=0.45
