@@ -2,11 +2,14 @@
 
 Commulyzer collects Reddit community discussions, normalises the raw data, and produces rule-based toxicity labels for downstream analysis.
 
+## Data Acquisition
+
+Reddit data is fetched using [ScrapiReddit](https://github.com/rodneykeilson/ScrapiReddit), a dedicated scraping tool created and maintained by the author of this repository. This ensures full control over the scraping process and data provenance.
+
 ## Capabilities
 
-- Scrape top-post listings, permalinks, and full post/comment payloads with `scrape-subreddits.py` (multiple subreddits per run).
-- Regenerate `posts.csv` and `comments.csv` later without re-scraping via `--rebuild-from-json`.
-- Merge every `comments.csv` under `data/raw/reddit/` into a single dataset with `merge_comments.py` (adds a `source_subreddit` column).
+- Import top-post listings, permalinks, and full post/comment payloads from ScrapiReddit outputs (multiple subreddits per run).
+- Merge every `comments.csv` under `data/raw/reddit/` into a single dataset with `merge-comments.py` (adds a `source_subreddit` column).
 - Optionally clean labeled outputs with `clean_comments.py` (drop blank bodies, dedupe comment text).
 - Run `label-comments.py` to assign multilabel toxicity scores (toxic, severe_toxic, obscene, threat, insult, identity_hate, racism) plus per-subreddit statistics.
 - Maintain extensible regex libraries under `patterns/`—drop additional TSV rows to expand coverage without code changes.
@@ -18,28 +21,24 @@ Commulyzer collects Reddit community discussions, normalises the raw data, and p
 pip install requests pandas tqdm
 
 # optional: confirm CLI options
-python scrape-subreddits.py --help
 python label-comments.py --help
 ```
 
 ## Typical Workflow
 
 ```powershell
-# 1. Scrape one or more subreddits (JSON + CSV outputs)
-python scrape-subreddits.py MobileLegendsGame FortniteBR --output-format both
+# 1. Scrape one or more subreddits using ScrapiReddit (see its README for usage)
+#    Place the resulting JSON/CSV files under data/raw/reddit/<subreddit>/
 
-# 2. (Optional) Rebuild CSVs later from cached JSON without new network calls
-python scrape-subreddits.py MobileLegendsGame --rebuild-from-json
-
-# 3. Merge all subreddit comments into a single file
+# 2. Merge all subreddit comments into a single file
 python merge-comments.py
 # -> data/processed/merged/merged_comments.csv
 
-# 4. Label the merged dataset (creates *_labeled.csv next to the input)
+# 3. Label the merged dataset (creates *_labeled.csv next to the input)
 python label-comments.py --input data/processed/merged/merged_comments.csv
 # -> data/processed/merged/merged_comments_labeled.csv
 
-# 5. (Optional) Clean the labeled file (removes blank bodies, deduplicates comment text)
+# 4. (Optional) Clean the labeled file (removes blank bodies, deduplicates comment text)
 python clean-comments.py --input data/processed/merged/merged_comments_labeled.csv
 # -> data/processed/merged/merged_comments_labeled_cleaned.csv
 ```
@@ -48,7 +47,7 @@ The labeling script prints overall totals and per-subreddit toxicity ratios. Whe
 
 ## Data Layout
 
-- `data/raw/reddit/<subreddit>/` – scraped assets (`posts.json`, `links.json`, `post_jsons/*.json`, optional CSVs).
+- `data/raw/reddit/<subreddit>/` – scraped assets (`posts.json`, `links.json`, `post_jsons/*.json`, optional CSVs) from ScrapiReddit.
 - `data/processed/merged/` – merged, labeled, and cleaned comment datasets.
 - `patterns/` – base regex TSV files per label (`<label>.tsv`).
 
@@ -57,5 +56,5 @@ The generated CSVs retain all original comment metadata and add `_score`, `_bin`
 ## Notes
 
 - All pattern files include offensive language solely for detection purposes.
-- Respect Reddit rate limits; tune `--delay`, `--limit`, and `--comment-limit` as needed.
+- Respect Reddit rate limits; tune ScrapiReddit's delay and limit options as needed.
 - A VPN or proxy may be required where reddit.com is blocked.

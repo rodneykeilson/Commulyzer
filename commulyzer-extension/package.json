@@ -1,0 +1,20 @@
+{
+  "name": "commulyzer-extension",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild src/content.ts --bundle --format=esm --outfile=dist/content.js --target=es2020",
+    "watch": "esbuild src/content.ts --bundle --format=esm --outfile=dist/content.js --target=es2020 --watch",
+    "lint": "eslint src --ext .ts"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.266",
+    "@types/node": "^22.7.4",
+    "@eslint/js": "^9.9.0",
+    "esbuild": "^0.23.0",
+    "eslint": "^9.9.0",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.8.0"
+  }
+}

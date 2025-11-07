@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Commulyzer Extension",
+  "description": "Detect and mask toxic sentences on web pages using Commulyzer's baseline classifier.",
+  "version": "0.1.0",
+  "action": {
+    "default_title": "Commulyzer"
+  },
+  "permissions": [],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["dist/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/model/metadata.json",
+        "assets/model/labels.txt",
+        "assets/model/thresholds.json",
+        "assets/model/classifier_coefficients.json",
+        "assets/model/classifier_intercepts.json",
+        "assets/model/vocabulary_combined.json"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
