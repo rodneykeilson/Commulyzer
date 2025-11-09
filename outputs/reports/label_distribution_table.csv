@@ -1,0 +1,8 @@
+Label,Jumlah Positif,Persentase (%)
+toxic,87240,9.76
+severe_toxic,534,0.06
+obscene,54036,6.05
+threat,935,0.1
+insult,20355,2.28
+identity_hate,644,0.07
+racism,1057,0.12
