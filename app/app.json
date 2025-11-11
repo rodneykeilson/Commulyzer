@@ -14,11 +14,17 @@
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.rodneykeilson.commulyzer"
     },
     "web": {
       "bundler": "metro",
       "output": "static"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "81d272d5-a44b-473a-acd6-f6b4f4f6bd87"
+      }
     }
   }
 }

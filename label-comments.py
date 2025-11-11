@@ -49,7 +49,7 @@ NEGATORS = {
 }
 NEGATION_WINDOW = 3  # tokens to the left
 
-# Default threshold for converting severity score to binary 0/1
+# Default threshold for converting se   verity score to binary 0/1
 DEFAULT_BIN_THRESHOLD = 0.5
 
 # Max score cap per label (prevents runaway totals)
